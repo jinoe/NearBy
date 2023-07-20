@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!-- DTO -->
+		<typeAlias type="com.ojo.entity.Member" alias="Member"/>
+		<typeAlias type="com.ojo.entity.Product" alias="Product"/>
+		<typeAlias type="com.ojo.entity.Chat" alias="Chat"/>
+		<typeAlias type="com.ojo.entity.ChatRoom" alias="ChatRoom"/>
+		<typeAlias type="com.ojo.entity.CharRoomView" alias="CharRoomView"/>
+	</typeAliases>
+</configuration>

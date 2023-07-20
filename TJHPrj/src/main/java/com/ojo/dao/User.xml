@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ojo.dao.UserDao">
+	<select id="userCheck" parameterType="Member" resultType="Member">
+		select * from member where id = #{id} and password = #{password}
+	</select>
+	<insert id="createUser" parameterType="Member">
+		insert into member values(#{id}, #{password}, #{nickname}, '',#{gu}, sysdate, 'defaultProfile.jpg')
+	</insert>
+	<select id="duplicatedIdCheck" parameterType="Member" resultType="Member">
+		select * from member where id=#{id}
+	</select>
+	<select id="duplicatedNickCheck" parameterType="Member" resultType="Member">
+		select * from member where nickname=#{nickname}
+	</select>
+	<select id="getUserProducts" parameterType="java.util.HashMap" resultType="Product">
+		select idx, userid, title, content, price, gu, istrade, writedate, category, filenames from
+		    (select rownum rownumber, p.* from 
+		    	(select * from product where 
+		        	userid=#{userId}
+		        	order by writedate desc, idx desc) p) where rownumber between #{start} and #{end}
+	</select>
+	<select id="getProductCount" parameterType="string" resultType="int">
+		select count(*) from product where 
+		   userid=#{userId} and istrade=0
+	</select>
+	
+	<select id="getChatList" parameterType="int" resultType="Chat">
+		select * from chat where roomidx=#{roomIdx} order by writetime
+	</select>
+	
+	<insert id="addChatting" parameterType="java.util.HashMap">
+		insert into chat values(chat_idx_seq.nextval,#{roomIdx},#{nickname},sysdate,#{msg},0)
+	</insert>
+	<update id="updateRoomTime" parameterType="int">
+		update chatroom set lastupdate=sysdate where idx=#{roomIdx}
+	</update>
+	<select id="getRoomListByNick" parameterType="string" resultType="CharRoomView">
+		select p.title, p.fileNames, r.* from product p
+			INNER join (select * from chatroom WHERE sellernick=#{nickname} or purchasernick=#{nickname} order by lastupdate desc) r
+			on p.idx=r.productidx
+	</select>
+</mapper>

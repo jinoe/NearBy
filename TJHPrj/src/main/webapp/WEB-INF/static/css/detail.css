@@ -1,0 +1,214 @@
+body {
+	font-family: Arial;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.menu {
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background-color: skyblue;
+}
+#wrap {
+	/* min-height: 100vh; */
+	/* position: relative; */
+	width: 100%;
+	/* background-color: #f2f2f2; */
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.product {
+	position: static;
+	top: 0px;
+	width: 500px;
+	height: 500px;
+	/* margin: auto; */
+	margin-left: 20px;
+	padding:20px;
+	background: white;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+}
+/* 이미지 슬라이드 */
+.container{
+  width: 600px;
+  position : relative;
+}
+.album{
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+  background-color: white;
+}
+.album .material-symbols-outlined{
+	font-size: 40px;
+}
+.images{
+  /* position: relative; */
+  display: flex;
+  height: 500px;
+}
+.container img{
+  width: 600px;
+  height: 500px;
+  object-fit : contain;
+}
+.container button, button:active, button:focus{
+  width: 50px; 
+  height: 50px;
+  background-color: transparent;	
+  outline: none;
+  border: none;
+}
+button:disabled{  
+ /*  background-color: gainsboro; */
+ 	color:gainsboro;
+}
+.prev{
+  position: absolute;
+  left:15px;
+  top:250px;
+}
+.next{
+  position: absolute;
+  right: 0px;
+  top:250px;
+}
+
+
+.detail{
+	width: 1120px;
+	height: 600px;
+	background-color: white;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	margin: 40px auto;
+	display: flex;
+	
+}
+
+.mySlides {
+	display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+	cursor: pointer;
+}
+
+/* Next & previous buttons */
+/* .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 170px;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+Position the "next button" to the right
+.next {
+	right: 0px;
+	border-radius: 3px 0 0 3px;
+	border: 1px solid black;
+}
+
+On hover, add a black background color with a little bit see-through
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+} */
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+	text-align: left;
+	background-color: #222;
+	padding: 1px 16px;
+	color: white;
+	font-weight: bold;
+	height : 6px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Six columns side by side */
+.column {
+	float: left;
+	width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+	opacity: 0.6;
+}
+
+.active, .demo:hover {
+	opacity: 1;
+}
+
+footer {
+	width: 100%;
+	height: 110px;
+	bottom: 0px;
+	position: absolute;
+	border-top: 1px solid #c4c4c4;
+	padding-top: 15px;
+	color: #808080;
+	font-size: 11px;
+}
+
+footer a{
+	display: inline-block;
+	margin: 0 20px 10px 20px;
+	color: #808080; font-size: 11px;
+}
+
+footer a:visited{
+	color: #808080;
+}
+
+footer p{
+	margin-top: 0; margin-bottom: 0;
+}
+
+footer p span {
+	display: inline-block;
+	margin-left: 20px;
+}
+section{
+	padding-bottom: 105px;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+}

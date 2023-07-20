@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.main {
+	padding-top: 150px;
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+}
+
+.sellerInfo {
+	display: flex;
+	align-items: center;
+	border: 1px solid black;
+}
+
+.sellerInfo>.sellerDetail {
+	padding: 40px;
+}
+
+.sellerInfo>.sellerDetail>.nickname {
+	font-size: 30px;
+	font-weight: bold;
+}
+.sellerInfo>.sellerDetail>div{
+	margin:10px;
+}
+.sellerInfo>.sellerDetail textarea {
+	width: 570px;
+	height: 150px;
+	margin: auto;
+	overflow: hidden;
+	resize: none;
+	border: 1px solid black;
+	outline: none;
+	padding: 10px;
+}
+
+.sellerProduct{
+	border: 1px solid black;
+	margin-top:30px;
+	padding:20px;
+}
+
+
+.div_items {
+   /* margin-left: 5%; */
+   width: 958px;
+   background: #ffffff;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.div_items>.item {
+   width: 200px;
+   height: 330px;
+   margin: 15px;
+   background: #ffffff;
+  /*  border-radius: 5px; */
+   border: 1px solid lightgray;
+   /* padding: 10px; */
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   /* justify-content:flex-start; */
+   align-items: center;
+}
+
+.div_items>.item>img {
+   width: 200px;
+   height: 200px;
+   background-size: cover;
+   /* border-radius: 5px 5px 5px 5px; */
+}
+
+.div_items>.item>div {
+   margin: 0 10px;
+}
+.pageNums {
+	display: flex;
+	justify-content: center;
+}
+.pageNums a{
+	display: flex;
+	margin:10px;
+}
+.pageNums .selected{
+	color:orangered;
+	font-weight: bold;
+}
